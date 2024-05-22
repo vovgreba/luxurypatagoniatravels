@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.4bc0a340.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.3a4ddde5.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.14fa0a65.png">
+
+  <title>Luxurypatagoniatravels | Home</title>
+
+  <link rel="stylesheet" href="/adventure-tours.21711d4b.css">
+  <link rel="stylesheet" href="/adventure-tours.b10d73a7.css">
+
+  <script src="/adventure-tours.6300e3bc.js" defer=""></script>
+  <script src="/adventure-tours.4d6bcbeb.js" defer=""></script>
+
+  <style>.page {
+  scroll-padding-top: calc(var(--header-height));
+}
+</style>
+
+</head>
+
+
+
+
+
+<body class="page__body"><svg aria-hidden="true" width="0" height="0" style="position:absolute"></svg>
+  <div class="site-container">
+
+    <header class="header background">
+  <div class="container container--big">
+    <div class="header__inner">
+
+      <nav class="nav">
+
+        <button class="burger" aria-label="Mobile menu" type="button"> <span></span> </button>
+
+        <a class="logo" href="/index.html">
+          <img src="/logo.cd13699a.svg" alt="logo" width="257" height="48" loading="lazy">
+        </a>
+
+        <div class="nav__inner">
+
+          <a class="logo" href="/index.html">
+            <img src="/logo.cd13699a.svg" alt="logo" width="257" height="48" loading="lazy">
+          </a>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link {{ page === 'home' }}">
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/destinations.html" class="nav__link {{ page === 'destinations' }}">
+                Destinations
+              </a>
+            </li>
+
+
+            <li class="nav__item">
+              <a href="/tours.html" class="nav__link {{ page === 'tours' }}">
+                Tours
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="/guide.html" class="nav__link {{ page === 'guide' }}">
+                Guide
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav__btns">
+            <a class="btn btn--user" href="/sign-up.html">
+              Sign Up
+            </a>
+
+            <button class="btn btn--reverse request-btn" type="button" formsappId="664339b5544f758068cf14f0">
+              Booking
+            </button>
+          </div>
+        </div>
+
+      </nav>
+
+    </div>
+
+  </div>
+</header>
+
+
+<script>const startHeightValue = ()=>{
+    let vh = window.innerHeight * 1;
+    document.querySelector(":root").style.setProperty("--vh", `${vh}px`);
+    const pageHeader = document.querySelector(".header");
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+    document.documentElement.style.setProperty("--header-height", `${headerHeight}px`);
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 0) pageHeader.classList.add("header--scroll");
+    else pageHeader.classList.remove("header--scroll");
+};
+window.addEventListener("resize", startHeightValue);
+window.addEventListener("scroll", startHeightValue);
+startHeightValue();
+
+</script>
+
+    <main class="main">
+      <section class="hero background hero-tour">
+  <div class="container container--big">
+    <div class="hero__inner hero-tour__inner">
+
+      <div class="hero__content hero-tour__content">
+        <a class="title" href="/tours.html">Back to Tours</a>
+
+        <h1>
+          Patagonian Beach Escape
+        </h1>
+
+        <p>Relax and rejuvenate on Patagonia's pristine beaches with this leisurely tour. Enjoy wildlife watching in Valdés Peninsula, indulge in water sports, and learn about marine life from a biologist. Perfect for those looking to unwind by the sea in one of the world's most tranquil settings.</p>
+      </div>
+
+      <div class="hero__picture hero-tour__picture">
+        <img src="/hero-beach.51052067.jpeg" alt="hero" width="822" height="619" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section class="activities">
+  <img src="/beach.19ac8ad2.jpeg" alt="beach" width="1440" height="643" loading="lazy">
+  <div class="container">
+
+    <div class="activities__content">
+      <h2>Detailed Itinerary with Highlights and Activities</h2>
+
+      <ul class="activities__detailed">
+        <li>Day 1: Arrival in Puerto Madryn, check-in, leisure day at the beach.</li>
+        <li>Day 2-3: Wildlife watching in Valdés Peninsula, possible whale watching.</li>
+        <li>Day 4-5: Leisure days with optional snorkeling, scuba diving, or sailing.</li>
+        <li>Day 6: Visit to a local sea lion colony with a marine biologist.</li>
+        <li>Day 7: Departure.</li>
+      </ul>
+
+      <h2>Inclusions</h2>
+      <p class="description">Beachfront resort accommodations, all meals, transportation, guided tours, and optional water sports equipment.</p>
+      <img src="/inclusions-beach.d1084099.jpeg" alt="inclusions-beach" width="1200" height="430" loading="lazy">
+      <h2>Pricing and Availability</h2>
+      <p class="description">Pricing varies based on accommodation choice and season. Customizable options available.</p>
+    </div>
+
+  </div>
+</section>
+      <section class="contact">
+  <div class="container container--big">
+
+    <h2 class="title">
+      Contacts
+    </h2>
+
+    <h3>
+      <span>Plan your next tour</span> with LuxuryPatagonia Travels!
+    </h3>
+
+    <form class="contact__form">
+
+      <label>
+        <input type="text" name="email" placeholder="Enter email">
+      </label>
+
+      <button class="btn btn--reverse" type="submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer background">
+  <div class="container container--big">
+    <div class="footer__main">
+      <div class="footer__contact-logo">
+        <a class="logo" href="/index.html">
+          <img src="/logo.cd13699a.svg" alt="logo" width="257" height="48" loading="lazy">
+        </a>
+        <span>Email:</span>
+        <a class="footer__contact" href="mailto:contact@luxurypatagoniatravels.com">contact@luxurypatagoniatravels.com</a>
+      </div>
+
+      <div class="footer__inner">
+        <p>Newsletter</p>
+
+        <form class="contact contact__form">
+
+          <label>
+            <input type="text" name="email" placeholder="Enter email">
+          </label>
+
+          <button class="btn btn--reverse" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>LuxuryPatagonia Travels © 2024. All Rights Reserved</p>
+      <div class="footer__policy">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<script src="https://forms.app/static/embed.js" async="" defer="" onload="new formsapp('664339b5544f758068cf14f0', 'popup', {'overlay':'rgba(45,45,45,0.5)','button':{'color':'','text':'Booking'},'width':'800px','height':'600px','openingAnimation':{'entrance':'animate__fadeIn','exit':'animate__fadeOut'}});"></script>
+
+
+
+
+  </div>
+</body>
+
+</html>
+
+
+
+
+

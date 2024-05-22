@@ -1,0 +1,65 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poppins:wght@400;500;600;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --content-width: 1200px;
+  --content-width-big: 1296px;
+
+
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-big: calc(var(--content-width-big) + (var(--container-offset) * 2));
+
+  --header-height: 108px;
+
+  // font-family
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Libre Baskerville", serif;
+  --font-family-third: "Work Sans", sans-serif;
+
+  // font-weight
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  // color
+  --color-white: #fff;
+  --color-white-50: #f7faff;
+  --color-white-75: #dbe9ff;
+  --color-white-opacity-50: rgba(255, 255, 255, 0.5);
+
+  --color-grey-50: #e7dfdc;
+  --color-grey-400: #464646;
+
+  --color-black: #000;
+  --color-black-900: #141313;
+
+  --color-black-opacity-30: rgba(0, 0, 0, 0.3);
+  --color-black-opacity-50: rgba(0, 0, 0, 0.5);
+  --color-black-opacity-80: rgba(0, 0, 0, 0.8);
+  --color-black-900-opacity-50: rgba(20, 19, 19, 0.5);
+
+
+  --color-blue-100: #7e9fd6;
+
+  --color-blue-125: #89abe3;
+  --color-blue-150: #507fbb;
+  --color-blue-175: #4778c8;
+  --color-blue-250: rgba(80, 127, 187, 0.3);
+  --color-blue-800: #0a1c33;
+  --color-blue-850: #05101d;
+
+
+  //  radius
+  --radius-btn: 8px;
+  --radius-main: 20px;
+
+
+}
+
+
+

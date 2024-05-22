@@ -1,0 +1,93 @@
+<header class="header background">
+  <div class="container container--big">
+    <div class="header__inner">
+
+      <nav class="nav">
+
+        <button class="burger" aria-label="Mobile menu" type="button"> <span></span> </button>
+
+        <a class="logo" href="index.html">
+          <img src="./images/logo.svg" alt="logo" width="257" height="48" loading="lazy">
+        </a>
+
+        <div class="nav__inner">
+
+          <a class="logo" href="index.html">
+            <img src="./images/logo.svg" alt="logo" width="257" height="48" loading="lazy">
+          </a>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link {{ page === 'home' }}">
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="destinations.html" class="nav__link {{ page === 'destinations' }}">
+                Destinations
+              </a>
+            </li>
+
+
+            <li class="nav__item">
+              <a href="tours.html" class="nav__link {{ page === 'tours' }}">
+                Tours
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="guide.html" class="nav__link {{ page === 'guide' }}">
+                Guide
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav__btns">
+            <a class="btn btn--user" href="sign-up.html">
+              Sign Up
+            </a>
+
+            <button class="btn btn--reverse request-btn" type="button" formsappId="664339b5544f758068cf14f0">
+              Booking
+            </button>
+          </div>
+        </div>
+
+      </nav>
+
+    </div>
+
+  </div>
+</header>
+
+
+<script>
+
+  const startHeightValue = () => {
+    let vh = window.innerHeight * 1;
+    document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
+
+    const pageHeader = document.querySelector('.header')
+
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+
+    document.documentElement.style.setProperty(
+      '--header-height',
+      `${headerHeight}px`
+    );
+
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 0) {
+      pageHeader.classList.add('header--scroll')
+    } else {
+      pageHeader.classList.remove('header--scroll')
+    }
+  }
+
+  window.addEventListener('resize', startHeightValue);
+  window.addEventListener('scroll', startHeightValue);
+
+  startHeightValue();
+
+</script>

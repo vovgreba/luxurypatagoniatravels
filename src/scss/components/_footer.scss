@@ -1,0 +1,160 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0 23px 40px;
+    color: var(--color-white);
+  }
+  .contact {
+    max-width: 526px;
+    background-image: none;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__main {
+    padding: 74px 0 74px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    max-width: 526px;
+    width: 100%;
+
+    p {
+      font-weight: var(--fw-500);
+      font-size: 20px;
+      color: var(--color-white);
+      margin-bottom: 24px;
+    }
+
+    a {
+      color: var(--color-green-350);
+      font-size: 16px;
+      font-weight: 600;
+
+      &:not(:last-child) {
+      margin-right: 48px;
+      }
+
+    }
+  }
+
+  .logo {
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  &__form {
+
+    input {
+      max-width: 357px;
+    }
+
+    .btn {
+      border: 2px solid transparent;
+      color: var(--color-black) !important;
+      background-color: var(--color-white);
+
+      &:hover,
+      &:focus {
+        color: var(--color-blue-150);
+      }
+    }
+  }
+
+  &__policy {
+    display: flex;
+    gap: 48px;
+    margin-right: 40px;
+
+    a {
+      transition: color 0.2s;
+      color: var(--color-white);
+
+      &:hover,
+      &:focus {
+        color: var(--color-blue-150);
+      }
+
+    }
+  }
+
+  &__contact-logo {
+
+    span {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: var(--fw-500);
+      color: var(--color-white);
+      margin-right: 41px;
+    }
+  }
+
+  &__contact {
+    font-size: 20px;
+    transition: color 0.2s;
+    line-height: 1.2;
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      color: var(--color-blue-150);
+    }
+
+  }
+
+  @include media(tablet-wide) {
+
+    &__contact-logo {
+      max-width: 450px;
+    }
+    .contact, &__inner {
+      max-width: 500px;
+    }
+  }
+
+  @include media(tablet) {
+    &__contact-logo {
+      max-width: 550px;
+      width: 100%;
+    }
+
+    .contact, &__inner {
+      max-width: 550px;
+    }
+
+    &__main {
+      padding: 40px 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  @include media(mobile-s) {
+
+    &__contact {
+      font-size: 15px;
+    }
+  }
+}

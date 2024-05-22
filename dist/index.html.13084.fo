@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.4bc0a340.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.3a4ddde5.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.14fa0a65.png">
+
+  <title>Luxurypatagoniatravels | Home</title>
+
+  <link rel="stylesheet" href="/adventure-tours.21711d4b.css">
+  <link rel="stylesheet" href="/adventure-tours.b10d73a7.css">
+
+  <script src="/adventure-tours.6300e3bc.js" defer=""></script>
+  <script src="/adventure-tours.4d6bcbeb.js" defer=""></script>
+
+  <style>.page {
+  scroll-padding-top: calc(var(--header-height));
+}
+</style>
+
+</head>
+
+
+
+
+
+<body class="page__body"><svg aria-hidden="true" width="0" height="0" style="position:absolute"></svg>
+  <div class="site-container">
+
+    <header class="header background">
+  <div class="container container--big">
+    <div class="header__inner">
+
+      <nav class="nav">
+
+        <button class="burger" aria-label="Mobile menu" type="button"> <span></span> </button>
+
+        <a class="logo" href="/index.html">
+          <img src="/logo.cd13699a.svg" alt="logo" width="257" height="48" loading="lazy">
+        </a>
+
+        <div class="nav__inner">
+
+          <a class="logo" href="/index.html">
+            <img src="/logo.cd13699a.svg" alt="logo" width="257" height="48" loading="lazy">
+          </a>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link true">
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/destinations.html" class="nav__link false">
+                Destinations
+              </a>
+            </li>
+
+
+            <li class="nav__item">
+              <a href="/tours.html" class="nav__link false">
+                Tours
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="/guide.html" class="nav__link false">
+                Guide
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav__btns">
+            <a class="btn btn--user" href="/sign-up.html">
+              Sign Up
+            </a>
+
+            <button class="btn btn--reverse request-btn" type="button" formsappId="664339b5544f758068cf14f0">
+              Booking
+            </button>
+          </div>
+        </div>
+
+      </nav>
+
+    </div>
+
+  </div>
+</header>
+
+
+<script>const startHeightValue = ()=>{
+    let vh = window.innerHeight * 1;
+    document.querySelector(":root").style.setProperty("--vh", `${vh}px`);
+    const pageHeader = document.querySelector(".header");
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+    document.documentElement.style.setProperty("--header-height", `${headerHeight}px`);
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 0) pageHeader.classList.add("header--scroll");
+    else pageHeader.classList.remove("header--scroll");
+};
+window.addEventListener("resize", startHeightValue);
+window.addEventListener("scroll", startHeightValue);
+startHeightValue();
+
+</script>
+
+    <main class="main">
+      <section class="hero background ">
+  <div class="hero__inner">
+    <div class="hero__container container home-container">
+      <div class="hero__title">
+        <img src="/hero-bg.9538ece6.png" alt="hero" width="845" height="645" loading="lazy">
+        <h1><span>begin your</span>
+          adventure</h1>
+      </div>
+      <div class="hero__content">
+
+        <h2>
+          Welcome to LuxuryPatagonia Travels
+        </h2>
+
+        <p>
+          Experience unparalleled luxury in the wild, enchanting landscapes of Patagonia.
+        </p>
+
+        <button class="btn request-btn btn--reverse" type="button" formsappId="664339b5544f758068cf14f0">
+          Book a Trip
+        </button>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section class="tours background--light">
+  <div class="container container--big">
+    <h2 class="title">Explore Our Featured Tours</h2>
+    <p class="desc">Discover the diverse experiences we offer, from cultural immersions to exhilarating adventures.</p>
+
+    <div class="swiper swiper__tours">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <h3>Cultural Tours</h3>
+          <img src="/cultural.6f841928.jpeg" alt="cultural tours" width="1296" height="480" loading="lazy">
+          <p>Immerse in Patagonian culture with our Cultural Tours. Experience local traditions, arts, and historical sites, enriching your understanding of this region's unique heritage and vibrant communities.</p>
+        </div>
+        <div class="swiper-slide">
+          <h3>Adventure Tours</h3>
+          <img src="/adventure.d11de872.jpeg" alt="adventure Tours" width="1296" height="480" loading="lazy">
+          <p>Venture into the wild with our Adventure Tours. Conquer Patagonian terrains through hiking, climbing, and rafting in some of the most breathtaking landscapes on the planet.</p>
+        </div>
+        <div class="swiper-slide">
+          <h3>Beach Vacations</h3>
+          <img src="/beach.b720c709.jpeg" alt="beach vacations" width="1296" height="480" loading="lazy">
+          <p>Relax by the pristine waters of Patagonia with our Beach Vacations. Enjoy serene coastlines, engage in water sports, or simply soak up the sun in this untouched coastal paradise.</p>
+        </div>
+        ...
+      </div>
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+
+
+
+
+
+
+      <section class="about">
+  <div class="about__info background">
+    <div class="container container--big">
+      <h2 class="title">ABOUT US</h2>
+      <p class="description">LuxuryPatagonia Travels excels in creating exceptional journeys through the dramatic vistas of Patagonia. Dedicated to bespoke service and sustainable tourism, we provide a range of exclusive tours, from remote cultural explorations to adventurous treks and serene beach retreats.</p>
+    </div>
+  </div>
+
+  <div class="about__images">
+    <img src="/about-1.47ca0db4.jpeg" alt="about" width="378" height="344" loading="lazy">
+    <img src="/about-2.380d7baf.jpeg" alt="about" width="636" height="344" loading="lazy">
+    <img src="/about-3.e0f06e0e.jpeg" alt="about" width="378" height="344" loading="lazy">
+  </div>
+</section>
+      <section class="discover">
+  <div class="container">
+    <h2>discover patagonia</h2>
+  </div>
+  <div class="discover__images">
+    <div class="discover__image">
+      <div class="one">
+        <img class="image--small" src="/image.f71fbc77.jpeg" alt="about" width="274" height="382" loading="lazy">
+        <img class="image image--big" src="/image-big.de837625.jpeg" alt="about" width="274" height="382" loading="lazy">
+        <img src="/image-2.43bb7ee3.jpeg" alt="about" width="451" height="312" loading="lazy">
+      </div>
+      <div class="two">
+        <img src="/image-3.bb99da73.jpeg" alt="about" width="381" height="323" loading="lazy">
+        <img src="/image-4.156efef9.jpeg" alt="about" width="344" height="242" loading="lazy">
+      </div>
+    </div>
+    <div class="discover__image discover__single">
+      <img src="/image-5.0517ae01.jpeg" alt="about" width="295" height="392" loading="lazy">
+    </div>
+    <div class="discover__image">
+
+      <div class="discover__image">
+        <div class="one">
+          <img src="/image-6.fb86eaf9.jpeg" alt="about" width="290" height="348" loading="lazy">
+          <img src="/image-7.5dfd1ea0.jpeg" alt="about" width="425" height="433" loading="lazy">
+        </div>
+        <div class="two">
+          <img src="/image-8.fd87fa19.jpeg" alt="about" width="178" height="242" loading="lazy">
+          <img src="/image-9.4250ce62.jpeg" alt="about" width="258" height="196" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      <section class="contact">
+  <div class="container container--big">
+
+    <h2 class="title">
+      Contacts
+    </h2>
+
+    <h3>
+      <span>Plan your next tour</span> with LuxuryPatagonia Travels!
+    </h3>
+
+    <form class="contact__form">
+
+      <label>
+        <input type="text" name="email" placeholder="Enter email">
+      </label>
+
+      <button class="btn btn--reverse" type="submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer background">
+  <div class="container container--big">
+    <div class="footer__main">
+      <div class="footer__contact-logo">
+        <a class="logo" href="/index.html">
+          <img src="/logo.cd13699a.svg" alt="logo" width="257" height="48" loading="lazy">
+        </a>
+        <span>Email:</span>
+        <a class="footer__contact" href="mailto:contact@luxurypatagoniatravels.com">contact@luxurypatagoniatravels.com</a>
+      </div>
+
+      <div class="footer__inner">
+        <p>Newsletter</p>
+
+        <form class="contact contact__form">
+
+          <label>
+            <input type="text" name="email" placeholder="Enter email">
+          </label>
+
+          <button class="btn btn--reverse" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>LuxuryPatagonia Travels © 2024. All Rights Reserved</p>
+      <div class="footer__policy">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<script src="https://forms.app/static/embed.js" async="" defer="" onload="new formsapp('664339b5544f758068cf14f0', 'popup', {'overlay':'rgba(45,45,45,0.5)','button':{'color':'','text':'Booking'},'width':'800px','height':'600px','openingAnimation':{'entrance':'animate__fadeIn','exit':'animate__fadeOut'}});"></script>
+
+
+
+
+  </div>
+</body>
+
+</html>
+
+
+
+
+

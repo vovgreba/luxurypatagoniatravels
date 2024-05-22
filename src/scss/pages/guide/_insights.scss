@@ -1,0 +1,85 @@
+@use '../../utils/functions/' as *;
+@use '../../utils/mixins/' as *;
+
+.insights {
+  padding: 86px 0;
+
+  &__container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+
+  &__content {
+    max-width: 720px;
+    width: 100%;
+    margin-top: 32px;
+    padding: 90px 124px;
+    min-height: 502px;
+    background-color: var(--color-blue-175);
+  }
+
+  img {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  h2 {
+    font-weight: var(--fw-600);
+    font-size: 24px;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    text-transform: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  p {
+    max-width: 472px;
+    width: 100%;
+    color: var(--color-white);
+  }
+
+  &__content--light {
+    background-color: var(--color-white-75);
+    color: var(--color-black-900);
+
+    h2, p {
+      color: var(--color-black-900);
+    }
+  }
+
+  @include media(desktop) {
+
+    &__content {
+      padding: clamp(2.188rem, -3.194rem + 8.681vw, 3.75rem);
+      min-height: unset;
+    }
+  }
+
+  @include media(tablet) {
+    padding: 20px 0;
+    
+    img {
+      max-width: unset;
+      aspect-ratio: 16 / 6;
+    }
+
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      padding: 40px 20px;
+      margin-top: 0;
+      max-width: unset;
+    }
+
+    p {
+      max-width: unset;
+    }
+  }
+}

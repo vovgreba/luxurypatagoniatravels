@@ -1,0 +1,98 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.policy {
+  padding: calc(var(--header-height) + 108px) 0 108px;
+
+  &__content {
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    padding-left: 64px;
+    margin-bottom: 54px;
+  }
+
+  h2 {
+    font-family: var(--font-family-third);
+    font-weight: var(--fw-600);
+    margin: 0 0 24px;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  p {
+    color: var(--color-black);
+    font-size: 20px;
+    letter-spacing: 0.6px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  a {
+    color: var( --color-blue-900);
+    text-decoration: underline;
+    font-weight: var(--fw-700);
+  }
+
+  ul {
+    padding-top: 24px;
+    margin: 0 0 24px;
+  }
+
+  li {
+    color: var(--color-black);
+    font-size: 20px;
+    position: relative;
+    padding-left: 24px;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: var(--fw-600);
+      color: var(--color-black);
+    }
+
+    span {
+      font-weight: 800;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  @include media(tablet) {
+    padding: calc(var(--header-height) + 40px) 0 40px;
+  }
+
+  @include media(mobile-m) {
+
+    h1 {
+      font-size: 44px;
+    }
+  }
+
+  @include media(mobile-l) {
+
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+  }
+}

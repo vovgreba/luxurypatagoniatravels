@@ -1,0 +1,157 @@
+@use '../../utils/functions/' as *;
+@use '../../utils/mixins/' as *;
+
+
+.featured {
+  padding: 72px 0;
+
+  .title {
+    padding-left: 64px;
+    margin-bottom: 86px;
+
+    &::before {
+      background-image: url('../images/icons/snowflake.svg');
+    }
+  }
+
+  &__hidding {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 18px;
+    gap: 40px;
+
+    .active {
+      color: var(--color-black);
+    }
+
+    h3 {
+      max-width: 150px;
+      justify-self: center;
+      width: 100%;
+      font-weight: var(--fw-500);
+      font-size: 20px;
+      text-align: center;
+      color: var(--color-black-opacity-30);
+      cursor: pointer;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 86px;
+    gap: 40px;
+  }
+
+  .swiper-scrollbar {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 1px;
+    background-color: var(--color-black-opacity-30);
+    border-radius: 0;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: var(--color-black);
+    height: 2px;
+    border-radius: 0;
+  }
+
+  .swiper {
+
+    &__content {
+      text-align: left;
+      max-width: 600px;
+
+      h3 {
+        text-align: left;
+        font-size: 24px;
+        font-weight: var(--fw-700);
+        margin-bottom: 16px;
+        line-height: 1.5;
+        color: var(--color-black);
+      }
+
+      p {
+        margin-bottom: 16px;
+        color: var(--color-black-opacity-50);
+
+        &:not(:last-of-type) {
+          font-weight: var(--fw-700);
+          color: var(--color-black-opacity-30);
+        }
+      }
+
+      .btn {
+        color: var(--color-blue-150) !important;
+        padding: 10px 0;
+        max-width: 147px;
+        text-align: start;
+        display: inline-block;
+        
+        &::after {
+          right: 34px;
+        }
+      }
+    }
+  }
+
+  @include media(tablet) {
+
+    .swiper-slide {
+
+      img {
+        max-width: 400px;
+        aspect-ratio: 16 / 10;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+
+    &__hidding {
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    .swiper-slide {
+      flex-direction: column;
+
+      img {
+        order: 0;
+        max-width: 500px;
+      }
+    }
+
+    .swiper__content {
+      order: 1;
+    }
+  }
+
+  @include media(mobile-m) {
+
+    .swiper-slide {
+
+      img {
+        max-width: 400px;
+      }
+    }
+
+  }
+
+  @include media(mobile-s) {
+
+    .swiper-slide {
+
+      img {
+        max-width: 300px;
+      }
+    }
+
+  }
+}

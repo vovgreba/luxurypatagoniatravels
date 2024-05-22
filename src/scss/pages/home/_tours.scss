@@ -1,0 +1,168 @@
+@use '../../utils/functions/' as *;
+@use '../../utils/mixins/' as *;
+
+
+.tours {
+  padding: 72px 0 100px;
+  position: relative;
+
+  .title {
+    padding-left: 64px;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    font-size: 24px;
+    color: var(--color-black-900-opacity-50);
+    margin-bottom: 87px;
+    max-width: 587px;
+  }
+
+  h3 {
+    color: var(--color-black);
+    font-weight: var(--fw-700);
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  .swiper {
+
+    p {
+      color: var(--color-black-opacity-50);
+      line-height: 1.2;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  .swiper-slide {
+    text-align: center;
+
+    a {
+      margin-bottom: 30px;
+    }
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 102px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-blue-150);
+    bottom: 32px;
+  }
+
+  .swiper-pagination-bullets {
+
+    .swiper-pagination-bullet  {
+      margin: 0 16px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 36.5%;
+    top: 25px;
+
+    &::after {
+      background-image: url('../images/icons/arrow-prev.svg');
+
+    }
+  }
+
+  .swiper-button-next{
+    top: 2px;
+    left: 60.5%;
+
+    &::after {
+      background-image: url('../images/icons/arrow-next.svg');
+    }
+  }
+
+  @include media(tablet) {
+
+    .swiper-button-prev, .swiper-button-next {
+
+      &::after {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    .swiper-button-prev{
+      left: 39%;
+    }
+
+    .swiper-button-next {
+      left: 58%;
+    }
+
+    .swiper-pagination-bullets {
+
+      .swiper-pagination-bullet  {
+        margin: 0 6px;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 106px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  @include media(mobile-l) {
+
+    .swiper-button-prev{
+      left: 36%;
+    }
+
+    .swiper-button-next {
+      left: 59%;
+    }
+  }
+
+  @include media(mobile-m) {
+
+    .swiper-button-prev{
+      left: 30%;
+    }
+
+    .swiper-button-next {
+      left: 65%;
+    }
+  }
+  
+  @include media(mobile-s) {
+
+    .swiper-button-prev{
+      left: 27%;
+    }
+
+    .swiper-button-next {
+      left: 65%;
+    }
+  }
+}

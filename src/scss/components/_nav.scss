@@ -1,0 +1,165 @@
+@use '../utils/functions/' as *;
+@use '../utils/mixins/' as *;
+
+.nav {
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+      display: block;
+
+      @include media(tablet) {
+        display: none;
+      }
+    }
+
+    .header & {
+
+      @include media(tablet) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+        padding-top: calc(var(--header-height) * 1.5);
+        width: 100%;
+        height: calc(var(--vh));
+        background-color: var(--color-blue-850);
+        transform: translateX(150%);
+        transition-property: transform;
+        transition-duration: 0.4s;
+      }
+    }
+
+    .nav__btns {
+
+      .btn--user {
+
+        @include media(tablet) {
+
+          &:not(:last-child) {
+            margin-right: 0;
+            margin: 0 auto 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+
+    .header & {
+
+      @include media(desktop) {
+        margin-right: 10px;
+      }
+
+      @include media(tablet) {
+        z-index: -1;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__item {
+
+    .header & {
+
+      @include media(tablet) {
+      }
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    padding: 4px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    color: var( --color-white);
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color 0.4s, border 0.4s;
+    font-variation-settings: unset;
+    line-height: 1.2;
+
+    &:hover,
+    &:focus {
+      color: var(--color-blue-100);
+      border: 1px solid transparent;
+      border-image: url('../images/button-bg.png') 1 round;
+    }
+
+    &.true {
+      border-radius: 0;
+      border-bottom: 1px solid transparent;
+      border-image: url('../images/button-bg.png') 1 round;
+    }
+  }
+
+  &__btns {
+    display: flex;
+
+    .btn--user {
+      white-space: nowrap;
+      max-width: 123px;
+      background-color: transparent;
+      color: var(--color-blue-900);
+      border: 1px solid var(--color-blue-200);
+    }
+
+    .request-btn {
+      white-space: nowrap;
+      max-width: 180px;
+      color: #fff;
+      background-color: var(--color-blue-650);
+    }
+
+    @include media(tablet) {
+      flex-direction: column;
+    }
+
+  }
+
+  @include media(tablet) {
+    
+    .nav {
+
+      &__list {
+        margin: 0 auto;
+      }
+
+      &__item {
+        margin-right: 0;
+      }
+    }
+
+    &--footer {
+      flex-direction: column;
+
+      .nav {
+
+        &__list {
+
+          @include media(mobile-m) {
+            flex-direction: column;
+          }
+        }
+
+        &__inner {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

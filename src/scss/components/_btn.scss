@@ -1,0 +1,83 @@
+/* stylelint-disable declaration-no-important */
+@use '../utils/functions/' as *;
+@use '../utils/mixins' as *;
+
+*[class].btn {
+  font-family: var(--font-family-primary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 15px 32px;
+  width: 100%;
+  font-weight: var(--fw-500);
+  font-size: 20px;
+  white-space: nowrap;
+  line-height: 1;
+  text-align: center;
+  color: inherit;
+  background-color: inherit;
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-blue-100);
+  }
+
+  &--reverse {
+
+    &:hover,
+    &:focus {
+      border-image: url('../images/button-bg.png') 1 round;
+      color: var(--color-blue-100) !important;
+      background-color: transparent;
+    }
+  }
+
+  &--user {
+    position: relative;
+
+    &:hover::before,
+    &:focus::before {
+      filter: invert(1);
+    }
+  }
+
+  @include media(mobile-s) {
+    margin: 0 auto;
+    min-width: auto;
+  }
+}
+
+*[class].request-btn {
+  position: relative;
+
+  &:hover::after,
+  &:focus::after {
+    filter: invert(0);
+  }
+}
+
+
+.arrow {
+  position: relative;
+  color: var(--color-blue-150);
+  padding-right: 32px;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    background-image: url('../images/icons/arrow-next.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+  }
+}

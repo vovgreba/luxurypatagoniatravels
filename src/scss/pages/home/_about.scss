@@ -1,0 +1,60 @@
+@use '../../utils/functions/' as *;
+@use '../../utils/mixins/' as *;
+
+.about {
+  &__info {
+    padding: 72px 72px 181px;
+  }
+
+  .title {
+    padding-left: 64px;
+    margin-bottom: 16px;
+    color: var(--color-white);
+
+    &::before {
+      background-image: url('../images/icons/snowflake-white.svg');
+    }
+  }
+
+  .description {
+    max-width: 962px;
+    width: 100%;
+    color: var(--color-white);
+  }
+
+  &__images {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: var(--color-white-50);
+    display: grid;
+    grid-template-columns: 1fr 1.69fr 1fr;
+    gap: 24px;
+    padding-bottom: 127px;
+
+    img {
+      position: relative;
+      z-index: 3;
+      transform: translateY(-59px);
+      box-shadow: 0 10px 25px var( --color-black-opacity-50);
+    }
+  }
+
+  @include media(mobile-l) {
+    
+    &__images {
+      padding-bottom: 40px;
+    }
+  }
+
+  @include media(mobile-m) {
+
+    &__images {
+      padding-bottom: 20px;
+    }
+
+    &__info {
+      padding: 50px 20px 110px;
+    }
+  }
+
+}

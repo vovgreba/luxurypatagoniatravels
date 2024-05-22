@@ -1,0 +1,66 @@
+@use '../utils/functions/' as *;
+@use '../utils/mixins/' as *;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+  width: fit-content;
+  font-weight: var(--fw-600);
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 1.9951rem + 1.0458vi, 56px);
+  line-height: 1.05;
+
+  @include media(mobile-l) {
+    font-size: 32px;
+  }
+}
+
+h2,
+.title {
+  position: relative;
+  overflow: visible;
+  font-size: 32px;
+  color: var(--color-blue-800);
+  text-transform: capitalize;
+
+  @include media(mobile-l) {
+    font-size: 32px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../images/icons/snowflake.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  width: 100%;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: var(--fw-400);
+  letter-spacing: 0;
+}
+
+.description {
+  font-size: 24px;
+}
+
+
