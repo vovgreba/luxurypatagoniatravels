@@ -3,13 +3,6 @@
 
 .footer {
 
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 23px 0 23px 40px;
-    color: var(--color-white);
-  }
   .contact {
     max-width: 526px;
     background-image: none;
@@ -32,9 +25,9 @@
 
     p {
       font-weight: var(--fw-500);
-      font-size: 20px;
+      font-size: 22px;
       color: var(--color-white);
-      margin-bottom: 24px;
+      margin-bottom: 19px;
     }
 
     a {
@@ -51,10 +44,11 @@
 
   .logo {
     display: block;
-    margin-bottom: 48px;
+    margin-bottom: 46px;
   }
 
-  &__form {
+  form {
+    display: flex;
 
     input {
       max-width: 357px;
@@ -70,12 +64,25 @@
         color: var(--color-blue-150);
       }
     }
+
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0 23px 40px;
+    color: var(--color-white);
+
+    p {
+      font-size: 16px;
+    }
   }
 
   &__policy {
     display: flex;
     gap: 48px;
-    margin-right: 40px;
+    margin-right: 47px;
 
     a {
       transition: color 0.2s;
@@ -89,18 +96,18 @@
     }
   }
 
-  &__contact-logo {
+  &__contact {
 
     span {
       font-size: 20px;
       line-height: 1.2;
       font-weight: var(--fw-500);
       color: var(--color-white);
-      margin-right: 41px;
+      margin-right: 36px;
     }
   }
 
-  &__contact {
+  &__link {
     font-size: 20px;
     transition: color 0.2s;
     line-height: 1.2;
@@ -115,7 +122,7 @@
 
   @include media(tablet-wide) {
 
-    &__contact-logo {
+    &__contact {
       max-width: 450px;
     }
     .contact, &__inner {
@@ -124,9 +131,17 @@
   }
 
   @include media(tablet) {
-    &__contact-logo {
+
+    &__contact {
       max-width: 550px;
       width: 100%;
+    }
+
+    form {
+
+      input {
+        max-width: 100%;
+      }
     }
 
     .contact, &__inner {
@@ -144,16 +159,29 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      
+      padding: 20px 0;
+
       p {
         text-align: center;
       }
     }
   }
 
+  @include media(mobile-m) {
+
+    form {
+      flex-direction: column;
+      gap: 10px;
+
+      .btn {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
   @include media(mobile-s) {
 
-    &__contact {
+    &__link {
       font-size: 15px;
     }
   }

@@ -16,7 +16,7 @@ body {
   letter-spacing: 0;
   background-color: var(--color-white);
   font-optical-sizing: auto;
-  
+
   &__body {
     min-width: 320px;
     min-height: var(--vh);
@@ -33,8 +33,8 @@ body {
   width: 100%;
   max-width: var(--container-width);
 
-  &--big {
-    max-width: var(--container-width-big);
+  &--small {
+    max-width: var(--container-width--small);
   }
 }
 
@@ -44,12 +44,12 @@ body {
   grid-template-rows: 1fr auto;
 }
 
-.background {
+.background-dark {
   background-color: var(--color-blue-850);
+}
 
-  &--light {
-    background-color: var(--color-white-50);
-  }
+.background-light {
+  background-color: var(--color-white-50);
 }
 
 .logo {

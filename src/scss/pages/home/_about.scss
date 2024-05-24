@@ -3,7 +3,7 @@
 
 .about {
   &__info {
-    padding: 72px 72px 181px;
+    padding: 72px 57px 181px;
   }
 
   .title {
@@ -35,12 +35,12 @@
       position: relative;
       z-index: 3;
       transform: translateY(-59px);
-      box-shadow: 0 10px 25px var( --color-black-opacity-50);
+      box-shadow: 0 10px 25px var( --color-black-50);
     }
   }
 
   @include media(mobile-l) {
-    
+
     &__images {
       padding-bottom: 40px;
     }
@@ -50,6 +50,10 @@
 
     &__images {
       padding-bottom: 20px;
+    }
+    
+    .description {
+      font-size: 20px;
     }
 
     &__info {

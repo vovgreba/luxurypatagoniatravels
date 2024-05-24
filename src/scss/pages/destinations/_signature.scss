@@ -2,7 +2,7 @@
 @use '../../utils/mixins/' as *;
 
 .signature {
-  padding: 72px 0 108px;
+  padding: 72px 0 118px;
 
   .title {
     padding-left: 64px;
@@ -17,7 +17,7 @@
     max-width: 709px;
     margin-bottom: 87px;
     width: 100%;
-    color: var(--color-black-900-opacity-50);
+    color: var(--color-black-850);
   }
 
   &__items {
@@ -27,6 +27,7 @@
 
     img {
       margin-bottom: 30px;
+      min-height: 480px;
     }
 
     h3 {
@@ -35,13 +36,24 @@
       font-weight: var(--fw-700);
       font-size: 24px;
       line-height: 1.5;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     a {
-
+      font-weight: var(--fw-500);
+      font-size: 20px;
+      line-height: 1.2;
       &::after {
         right: 0px;
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--color-black);
+
+        &::after {
+          background-image: url('../images/icons/arrow-next-black.svg');
+        }
       }
     }
   }

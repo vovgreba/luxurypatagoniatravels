@@ -82,7 +82,7 @@
 
   &__link {
     font-size: 20px;
-    padding: 4px;
+    padding: 2px;
     white-space: nowrap;
     text-transform: capitalize;
     color: var( --color-white);
@@ -95,14 +95,10 @@
     &:hover,
     &:focus {
       color: var(--color-blue-100);
-      border: 1px solid transparent;
-      border-image: url('../images/button-bg.png') 1 round;
     }
 
     &.true {
-      border-radius: 0;
-      border-bottom: 1px solid transparent;
-      border-image: url('../images/button-bg.png') 1 round;
+      color: var(--color-blue-100);
     }
   }
 
@@ -111,7 +107,7 @@
 
     .btn--user {
       white-space: nowrap;
-      max-width: 123px;
+      max-width: 141px;
       background-color: transparent;
       color: var(--color-blue-900);
       border: 1px solid var(--color-blue-200);
@@ -122,6 +118,7 @@
       max-width: 180px;
       color: #fff;
       background-color: var(--color-blue-650);
+      max-width: 145px;
     }
 
     @include media(tablet) {
@@ -131,7 +128,7 @@
   }
 
   @include media(tablet) {
-    
+
     .nav {
 
       &__list {

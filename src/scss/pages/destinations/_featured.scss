@@ -7,36 +7,51 @@
 
   .title {
     padding-left: 64px;
-    margin-bottom: 86px;
+    margin-bottom: 98px;
 
     &::before {
       background-image: url('../images/icons/snowflake.svg');
     }
   }
 
+  [hidden] {
+    display: none;
+  }
+
   &__hidding {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 18px;
-    gap: 40px;
+    gap: 30px;
+    border-bottom: 1px solid var(--color-black-30);
+  }
 
-    .active {
+  [role="tab"] {
+    padding: 0;
+    padding-bottom: 18px;
+    position: relative;
+    width: 100%;
+    font-weight: var(--fw-500);
+    line-height: 1.27;
+    font-size: 20px;
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    color: var(--color-black-30);
+    transition: all 0.4s;
+
+    &:hover,
+    &:focus {
       color: var(--color-black);
     }
 
-    h3 {
-      max-width: 150px;
-      justify-self: center;
-      width: 100%;
-      font-weight: var(--fw-500);
-      font-size: 20px;
-      text-align: center;
-      color: var(--color-black-opacity-30);
-      cursor: pointer;
-    }
   }
 
-  .swiper-slide {
+  button[aria-selected="true"] {
+    border-bottom: 2px solid var(--color-black);
+  }
+
+
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,55 +60,48 @@
     gap: 40px;
   }
 
-  .swiper-scrollbar {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    height: 1px;
-    background-color: var(--color-black-opacity-30);
-    border-radius: 0;
-  }
+  &__information {
+    text-align: left;
+    max-width: 600px;
 
-  .swiper-scrollbar-drag {
-    background-color: var(--color-black);
-    height: 2px;
-    border-radius: 0;
-  }
-
-  .swiper {
-
-    &__content {
+    h3 {
       text-align: left;
-      max-width: 600px;
+      font-size: 24px;
+      font-weight: var(--fw-700);
+      margin-bottom: 16px;
+      line-height: 1.5;
+      color: var(--color-black);
+    }
 
-      h3 {
-        text-align: left;
-        font-size: 24px;
+    p {
+      margin-bottom: 16px;
+      color: var(--color-black-50);
+      line-height: 1.2;
+
+      &:not(:last-of-type) {
         font-weight: var(--fw-700);
-        margin-bottom: 16px;
-        line-height: 1.5;
-        color: var(--color-black);
+        color: var(--color-black-30);
+      }
+    }
+
+    .btn {
+      color: var(--color-blue-150) !important;
+      padding: 4px;
+      max-width: 117px;
+      text-align: start;
+      display: inline-block;
+      margin: 0;
+
+      &::after {
+        right: 4px;
       }
 
-      p {
-        margin-bottom: 16px;
-        color: var(--color-black-opacity-50);
+      &:hover,
+      &:focus {
+        color: var(--color-black) !important;
 
-        &:not(:last-of-type) {
-          font-weight: var(--fw-700);
-          color: var(--color-black-opacity-30);
-        }
-      }
-
-      .btn {
-        color: var(--color-blue-150) !important;
-        padding: 10px 0;
-        max-width: 147px;
-        text-align: start;
-        display: inline-block;
-        
         &::after {
-          right: 34px;
+          background-image: url('../images/icons/arrow-next-black.svg');
         }
       }
     }
@@ -101,7 +109,7 @@
 
   @include media(tablet) {
 
-    .swiper-slide {
+    &__content  {
 
       img {
         max-width: 400px;
@@ -113,45 +121,35 @@
   @include media(mobile-l) {
 
     &__hidding {
-
-      h3 {
-        font-size: 16px;
-      }
+      gap: 20px;
     }
 
-    .swiper-slide {
+    [role="tab"] {
+      font-size: 16px;
+    }
+
+    &__content  {
       flex-direction: column;
 
       img {
         order: 0;
-        max-width: 500px;
+        max-width: 100%;
+        width: 100%;
       }
     }
 
-    .swiper__content {
+    &__information  {
       order: 1;
+      max-width: 100%;
     }
   }
 
   @include media(mobile-m) {
 
-    .swiper-slide {
-
-      img {
-        max-width: 400px;
-      }
+    &__content  {
+      padding-top: 40px;
     }
 
   }
 
-  @include media(mobile-s) {
-
-    .swiper-slide {
-
-      img {
-        max-width: 300px;
-      }
-    }
-
-  }
 }

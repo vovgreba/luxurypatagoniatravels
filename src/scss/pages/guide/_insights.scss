@@ -4,8 +4,10 @@
 .insights {
   padding: 86px 0;
 
-  &__container {
+  &__wrapper {
     max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0;
@@ -15,9 +17,12 @@
     max-width: 720px;
     width: 100%;
     margin-top: 32px;
-    padding: 90px 124px;
     min-height: 502px;
     background-color: var(--color-blue-175);
+    padding: 90px 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   img {
@@ -55,20 +60,28 @@
   @include media(desktop) {
 
     &__content {
-      padding: clamp(2.188rem, -3.194rem + 8.681vw, 3.75rem);
+      padding: 70px 90px;
       min-height: unset;
     }
   }
 
+  @include media(tablet-wide) {
+
+    &__content {
+      padding: 40px 50px;
+      min-height: unset;
+    }
+
+   }
   @include media(tablet) {
     padding: 20px 0;
-    
+
     img {
       max-width: unset;
       aspect-ratio: 16 / 6;
     }
 
-    &__container {
+    &__wrapper {
       grid-template-columns: 1fr;
     }
 

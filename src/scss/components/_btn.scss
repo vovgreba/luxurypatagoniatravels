@@ -61,12 +61,12 @@
   }
 }
 
-
 .arrow {
   position: relative;
   color: var(--color-blue-150);
   padding-right: 32px;
   display: inline-block;
+  transition: all .4s;
 
   &::after {
     content: '';
@@ -79,5 +79,6 @@
     background-size: contain;
     width: 20px;
     height: 20px;
+    transition: all .4s;
   }
 }

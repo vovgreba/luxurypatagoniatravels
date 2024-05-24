@@ -1,8 +1,25 @@
 @use '../../utils/functions/' as *;
 @use '../../utils/mixins/' as *;
 
-.hero, .hero-tours {
+.hero {
   min-height: 900px;
+
+  h1 {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--fw-400);
+    font-size: 136px;
+    max-width: 753px;
+    line-height: 1.24;
+    position: absolute;
+    top: 100px;
+    right: -53px;
+    z-index: 2;
+
+    span {
+      white-space: nowrap;
+    }
+
+  }
 
   &__inner {
     position: absolute;
@@ -16,47 +33,64 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: var(--header-height);
-  }
 
-  h1 {
-    font-family: var(--font-family-secondary);
-    font-weight: var(--fw-400);
-    font-size: 136px;
-    max-width: 753px;
-    line-height: 1.24;
-    position: absolute;
-    top: 100px;
-    right: -70px;
-    z-index: 2;
+    &--tours {
 
-    span {
-      white-space: nowrap;
+      .hero__wrapper {
+        gap: 97px;
+      }
+
+      h1 {
+        position: relative;
+        top: 0;
+        right: 0;
+        max-width: 680px;
+      }
+
+      .hero__content {
+        padding-top: 187px;
+      }
+    }
+
+    &--home {
+
+      h2 {
+        text-transform: none;
+      }
+
     }
   }
 
-  .title-destinations {
-    font-size: 100px;
-  }
+  .hero__title {
 
-  &__inner-tours {
+    &--small {
+      font-size: 100px;
 
-    .hero__container {
-      gap: 97px;
     }
 
-    h1 {
-      position: relative;
+  }
+
+  &__intro {
+    position: relative;
+    width: 100%;
+    max-width: 821px;
+
+    img {
+      min-height: 650px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
       top: 0;
-      right: 0;
-      max-width: 680px;
-    }
-
-    .hero__content {
-      padding-top: 187px;
+      left: 0;
+      background-color: var(--color-black-50);
     }
   }
 
-  &__title, &__picture  {
+  &__picture  {
     position: relative;
     width: 100%;
     max-width: 845px;
@@ -72,24 +106,30 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: var(--color-black-opacity-50);
+      background-color: var(--color-black-50);
+    }
+
+    &--tours {
+      max-width: 596px;
+
+      &::before {
+        display: none;
+      }
     }
   }
 
-  &__picture-tours {
-    max-width: 620px;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  &__container {
+  &__wrapper {
     max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     align-items: flex-start;
     gap: 107px;
     padding: 0;
+
+    &--home {
+      gap: 132px;
+    }
   }
 
   &__content {
@@ -99,6 +139,10 @@
     padding-top: 50px;
     max-width: 416px;
     width: 100%;
+
+    &--tours {
+      max-width: 100%;
+    }
 
     h2 {
       margin: 0 0 16px;
@@ -127,7 +171,7 @@
       font-size: 32px;
       line-height: 1.2;
       justify-content: flex-start;
-      padding: 38px 75px;
+      padding: 33px 75px;
       white-space: nowrap;
       background-color: transparent;
       color: var(--color-white) !important;
@@ -152,14 +196,96 @@
     }
   }
 
+  // style for tour page
+
+  &--tour {
+
+    .hero__inner {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .hero__wrapper {
+      justify-content: flex-end;
+      gap: 146px;
+    }
+
+    a {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: var(--fw-500);
+      display: inline-block;
+      padding-left: 36px;
+      margin-bottom: 34px;
+      color: var(--color-white);
+      text-transform: none;
+
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/arrow-back.svg');
+      }
+    }
+
+    h1 {
+      position: relative;
+      top: 0;
+      right: 0;
+      left: 0;
+      transform: translate(0);
+      font-family: var(--font-family-primary);
+      font-size: 32px;
+      font-weight: var(--fw-600);
+      line-height: 1.5;
+      margin-bottom: 34px;
+      max-width: 630px;
+    }
+
+    .hero__content {
+      max-width: 630px;
+      padding-top: 124px;
+    }
+
+    p {
+      font-size: 24px;
+      max-width: 630px;
+    }
+
+    img {
+      min-height: 619px;
+    }
+
+    .hero__picture {
+      align-self: flex-end;
+      max-width: 592px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
   @include media(desktop-wide) {
 
     h1 {
-      font-size: clamp(2.25rem, -8.167rem + 18.519vw, 8.5rem);
+      font-size: clamp(2rem, 0.143rem + 9.286vw, 8.5rem);
     }
 
-    .title-destinations {
-      font-size: clamp(2.25rem, -4.417rem + 11.852vw, 6.25rem);
+    &--tour {
+
+       h1 {
+         font-size: 32px;
+       }
+
+    }
+
+    .hero__title {
+
+      &--small {
+        font-size: clamp(2rem, 0.786rem + 6.071vw, 6.25rem);
+      }
+
     }
 
     &__title {
@@ -169,10 +295,18 @@
       }
     }
 
-    &__container {
-      padding: 40px 15px;
+    &__wrapper {
+      padding: 40px 15px 40px 0;
     }
 
+    &--tour {
+
+      .hero__wrapper {
+        padding: 0;
+        padding-left: 15px;
+      }
+
+    }
   }
 
   @include media(desktop) {
@@ -182,20 +316,52 @@
       min-height: 750px;
     }
 
+    &__intro {
+
+      img {
+        min-height: 550px;
+      }
+    }
+
+    &--tour {
+      min-height: 850px;
+
+      .hero__inner {
+        min-height: 850px;
+      }
+
+      .hero__wrapper {
+        gap: 60px;
+      }
+
+    }
+
     &__title, &__picture  {
 
       img {
         min-height: 500px;
         aspect-ratio: 16 / 8;
       }
+
+      &--tour {
+
+        img {
+          min-height: 619px;
+        }
+      }
     }
-
-
 
     &__content {
 
       p {
         margin-bottom: 80px;
+      }
+
+      &--tour {
+
+        p {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -205,8 +371,20 @@
     &__content {
       max-width: 350px;
 
+      &--tours {
+        max-width: 100%;
+      }
+
       p {
         margin-bottom: 40px;
+      }
+
+
+      &--tour {
+
+        p {
+          margin-bottom: 0;
+        }
       }
 
       .btn {
@@ -227,9 +405,40 @@
       position: relative;
     }
 
-    &__container {
+    &__wrapper {
       flex-direction: column;
       gap: 40px;
+      padding: 40px 0;
+
+      &--home {
+
+        .hero__content {
+          padding: 0 15px;
+          max-width: 400px;
+
+          h2, p {
+            max-width: 400px;
+          }
+
+        }
+      }
+    }
+
+    &__intro {
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        min-height: unset;
+        aspect-ratio: 16 / 12;
+      }
+    }
+
+    &--tour {
+      
+      .hero__wrapper {
+        padding: 0;
+      }
     }
 
     h1 {
@@ -248,8 +457,6 @@
       align-self: center;
     }
 
-
-
     &__title, &__picture  {
 
       img {
@@ -258,17 +465,19 @@
     }
 
     &__picture {
+      max-width: 100%;
 
       img {
         aspect-ratio: 16 / 12;
+        width: 100%;
+      }
+
+      &--tours {
+        align-self: center;
       }
     }
 
-    &__picture-tours {
-      align-self: center;
-    }
-
-    &__inner-tours {
+    &__inner--tours {
 
       h1 {
         top: 0;
@@ -278,7 +487,7 @@
         margin: 0 auto;
       }
 
-      .hero__container {
+      .hero__wrapper {
         gap: 40px;
       }
 
@@ -288,6 +497,24 @@
         text-align: center;
       }
 
+    }
+
+    &--tour {
+
+      .hero__picture {
+        max-width: 100%;
+        order: 0;
+      }
+      .hero__content {
+        padding: 0 15px;
+        order: 1;
+      }
+
+      h1 {
+        text-align: left;
+        position: static;
+        transform: translate(0, 0);
+      }
     }
   }
 
@@ -312,7 +539,7 @@
 
     }
 
-    &__inner-tours {
+    &__inner--tours {
 
       .hero__container {
         gap: 20px;
@@ -321,6 +548,27 @@
 
     &__inner {
       min-height: 500px;
+    }
+
+
+    &--tour {
+
+      .hero__content {
+
+        a {
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -335,9 +583,6 @@
       min-height: 400px;
     }
 
-    h1 {
-      font-size: 28px;
-    }
   }
 
   @include media(mobile-s) {
